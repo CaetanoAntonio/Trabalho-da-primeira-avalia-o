@@ -1,4 +1,4 @@
-# Trabalho-da-primeira-avaliacao
+# Atividade Avaliativa 1º Bimestre - Programação 1
 
 *Menu interativo com 3 jogos diferentes, feito em C*
 
