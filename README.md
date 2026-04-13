@@ -1,6 +1,8 @@
 # Trabalho-da-primeira-avaliacao
 
-*menu interativo com 3 jogos diferentes, feito em C*
+*Menu interativo com 3 jogos diferentes, feito em C*
+
+*Desenvolvedores: Abner ítalo e Antonio Caetano*
 
 ## Guia dos jogos
 
