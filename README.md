@@ -2,7 +2,7 @@
 
 *Menu interativo com 3 jogos diferentes, feito em C*
 
-*Desenvolvedores: Abner ítalo e Antonio Caetano*
+*Desenvolvedores: Abner Matos e Antonio Caetano*
 
 ## Guia dos jogos
 
