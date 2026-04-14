@@ -12,43 +12,76 @@ void jogoQuiz() {
         int p, total = 0;
 
         printf("\n=== PERGUNTAS E RESPOSTAS ===\n");
-
+		
+		//PERGUNTA 1
+		while(1){
         printf("\nQuantos aliens o Ben 10 tem?\n");
         printf("1- 10 aliens\n2- 51 aliens\n3- 86 aliens\n4- 62 aliens\nEscolha: ");
-        scanf("%d", &p);
-        if (p == 4) { printf("Acertou!\n"); total += 20; }
-        else printf("Errou! R: 62 aliens\n");
+        
+        if(scanf("%d", &p) != 1){printf("Entrada invalida, digite um numero:\n"); while(getchar() != '\n');}
+        
+		else if (p == 4) { printf("Acertou!\n"); total += 20; break;}
+		else if(p >= 5){printf("Entrada invalida, digite um numero de 1 a 4:\n");}
 
+		else{ printf("Errou! R: 62 aliens\n"); break;}     }
+        
+	    //PERGUNTA 2
+	    while(1){
         printf("\nQuem eh o(a) professor(a) mais bonito(a)?\n");
         printf("1- Vitor Hugo\n2- Alessandra\n3- Pedro Girotto\n4- Polyana\nEscolha: ");
-        scanf("%d", &p);
-        if (p == 3) { printf("Acertou!\n"); total += 20; }
-        else printf("Errou! R: Pedro Girotto\n");
-
+        
+        if(scanf("%d", &p) != 1){printf("Entrada invalida, digite um numero:\n"); while(getchar() != '\n');} //Impede que haja loop infinito
+        
+        else if (p == 3) { printf("Acertou!\n"); total += 20; break; }
+   		else if(p >= 5){printf("Entrada invalida, digite um numero de 1 a 4:\n");}
+        	
+        else {printf("Errou! R: Pedro Girotto\n"); break;} } 
+			 
+        //PERGUNTA 3
+        while(1){
         printf("\nQual eh o maior time do Brasil?\n");
         printf("1- flamengo\n2- Paysandu\n3- Remo\n4- Vasco\nEscolha: ");
-        scanf("%d", &p);
-        if (p == 4) { printf("Acertou!\n"); total += 20; }
-        else printf("Errou! R: Vasco\n");
-
+        
+        if(scanf("%d", &p) != 1){printf("Entrada invalida, digite um numero:\n"); while(getchar() != '\n');}  //Impede que haja loop infinito
+		
+        else if (p == 4) { printf("Acertou!\n"); total += 20; break;}
+   		else if(p >= 5){printf("Entrada invalida, digite um numero de 1 a 4:\n");}
+        	
+        else {printf("Errou! R: Vasco\n"); break;}  }
+        	
+        //PERGUNTA 4	
+  	    while(1){
         printf("\nQuantos paises ha na America do Sul?\n");
         printf("1- 11\n2- 12\n3- 13\n4- 10\nEscolha: ");
-        scanf("%d", &p);
-        if (p == 2) { printf("Acertou!\n"); total += 20; }
-        else printf("Errou! R: 12\n");
-
-        printf("\nQuantos ml tem 1 litro?\n");
-        printf("1- 1000\n2- 800\n3- 10\n4- 100\nEscolha: ");
-        scanf("%d", &p);
-        if (p == 1) { printf("Acertou!\n"); total += 20; }
-        else printf("Errou! R: 1000\n");
+        //scanf("%d", &p); Não dá para ser usado, da mesma forma
+        
+        if(scanf("%d", &p) != 1){printf("Entrada invalida, digite um numero:\n"); while(getchar() != '\n');} //Impede que haja loop infinito
+        	
+        else if (p == 2) { printf("Acertou!\n"); total += 20; break; }
+   		else if(p >= 5){printf("Entrada invalida, digite um numero de 1 a 4:\n");}
+        	
+        else {printf("Errou! R: 12\n"); break;}   }
+        	
+  	    //PERGUNTA 5
+  	
+  	    while(1){
+        printf("\nQuantas linguas oficiais tem no Brasil?\n");
+        printf("1- 2\n2- 1\n3- 3\n4- 4\nEscolha: ");
+        //scanf("%d", &p);  Não dá para usar
+        
+        if(scanf("%d", &p) != 1){printf("Entrada invalida, digite um numero:\n"); while(getchar() != '\n');} //Impede que haja loop infinito
+                           
+        else if (p == 1) { printf("Acertou!\n"); total += 20; break; }
+   		else if(p >= 5){printf("Entrada invalida, digite um numero de 1 a 4:\n");}
+        	
+        else {printf("Errou! R: 2\n"); break;} }
 
         printf("\nPontuacao total: %d\n", total);
 
         printf("Jogar novamente? (s/n): ");
         scanf(" %c", &opcao);
 
-    } while (opcao == 's');
+    } while (opcao == 's' || opcao == 'S');
 }
 
 // ================= COBRA NA CAIXA =================
@@ -75,8 +108,10 @@ void jogoCobra() {
 
         // Jogador 1
         do {
+        	
             printf("Jogador 1: ");
-            scanf("%d", &p1);
+            
+            if(scanf("%d", &p1) != 1){printf("Entrada invalida, digite um numero:\n"); while(getchar() != '\n'); }
 
             if (p1 == 1) nomep1 = nome1;
             else if (p1 == 2) nomep1 = nome2;
@@ -85,13 +120,14 @@ void jogoCobra() {
             else if (p1 == 5) nomep1 = nome5;
             else if (p1 == 6) nomep1 = nome6;
             else if (p1 == 7) nomep1 = nome7;
-            else printf("\nNome invalido!\n");
+            else if(p1 <1 || p1 > 7) printf("\nNome invalido!\n");
         } while (p1 < 1 || p1 > 7);
 
         // Jogador 2
         do {
             printf("Jogador 2: ");
-            scanf("%d", &p2);
+            
+            if(scanf("%d", &p2) != 1){printf("Entrada invalida, digite um numero:\n"); while(getchar() != '\n'); }
 
             if (p2 == 1) nomep2 = nome1;
             else if (p2 == 2) nomep2 = nome2;
@@ -100,7 +136,7 @@ void jogoCobra() {
             else if (p2 == 5) nomep2 = nome5;
             else if (p2 == 6) nomep2 = nome6;
             else if (p2 == 7) nomep2 = nome7;
-            else printf("Nome invalido!");
+            else if(p2 < 1 || p2 > 7) printf("\nNome invalido!\n");
         } while (p2 < 1 || p2 > 7);
 
         printf("Jogador 1: %s", nomep1);
@@ -113,20 +149,27 @@ void jogoCobra() {
         } while (cobra == botao);
 
         printf("===== JOGO DA CAIXA =====\n");
+        
 
         while (1) {
-            vez = rand() % 2 + 1;
+         vez = rand() % 2 + 1;
 
             char *jogadorAtual = (vez == 1) ? nomep1 : nomep2;
 
             printf("Vez de %s\n", jogadorAtual);
-
+			
+			//Forma as caixas
             for (int i = 1; i <= 5; i++) {
-                printf("%d [*****]\n  [*****]\n  [*****]\n\n", i);
+                printf("%d. [*****]\n", i);
+                printf("   [*****]\n");
+                printf("   [*****]\n\n");
             }
 
             printf("Escolha uma caixa (1-5): ");
-            scanf("%d", &escolha);
+            //scanf("%d", &escolha); Não pode ser usado
+            
+            //Impede que aconteça o loop infinito
+            if(scanf("%d", &escolha) != 1){printf("Entrada invalida, digite um numero:\n"); while(getchar() != '\n'); }
 
             if (escolha == escolha_anterior) {
                 printf("\nVoce ja escolheu essa!\n");
@@ -221,11 +264,10 @@ void jogoGousmas() {
             printf("Turno do JOGADOR %d\n", turno + 1);
             printf("1 - Atacar  2 - Dividir Furia\nEscolha: ");
 
-            int acao;
-            scanf("%d", &acao);
-
-            int inimigo = 1 - turno;
-
+            int acao, inimigo = 1 - turno;
+			
+			if(scanf("%d", &acao) != 1){printf("Entrada invalida, digite um numero:\n"); while(getchar() != '\n'); }
+			
             if (acao == 1) {
                 int atacante, alvo;
 
