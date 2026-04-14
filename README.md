@@ -49,3 +49,7 @@ jogador).
 - O jogador que perder todas as suas Gousmas será derrotado.
 
 -  E ao finalizar, o jogador pode escolher entre jogar novamente ou voltar para o menu.
+
+### Nota dos desenvolvedores
+Esse jogo foi desenvolvido com o auxílio de inteligência artificial (ChatGPT), segue o link da conversa abaixo:
+https://chatgpt.com/share/69dda1be-28ac-83e9-a8e7-e0a6a7703d6a
