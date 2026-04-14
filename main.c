@@ -363,12 +363,14 @@ int main() {
     do {
         printf("\n=== JOGOS OFFLINE ===\n");
         printf("1- Perguntas e respostas\n2- Cobra na caixa\n3- Gousmas war\n4- Sair\nEscolha: ");
-        scanf("%d", &escolha);
-
-        if (escolha == 1) jogoQuiz();
+        //scanf("%d", &escolha);
+ 	 	 
+		  if (scanf("%d", &escolha) != 1){printf("Opcao invalida\n"); while(getchar() != '\n');}
+        else if (escolha == 1) jogoQuiz();
         else if (escolha == 2) jogoCobra();
         else if (escolha == 3) jogoGousmas();
         else if (escolha == 4) break;
+       
         else printf("Opcao invalida!\n");
 
         printf("\nEscolher outro jogo? (s/n): ");
